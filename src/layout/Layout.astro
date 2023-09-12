@@ -1,18 +1,21 @@
 ---
 import Header from "../components/layouts/Header.astro";
+import Footer from "../components/layouts/Footer.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-        <Header />
-		<slot />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body class="space-y-4">
+    <Header />
+    <div class="flex content-center justify-center h-screen max-w-screen">
+      <slot />
+    </div>
+    <Footer />
+  </body>
 </html>
-
